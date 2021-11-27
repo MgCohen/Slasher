@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd1d858d6af04d4b96376d59f8953c3, type: 3}
   m_Name: InputInstaller
   m_EditorClassIdentifier: 
+  m_viewPrefab: {fileID: 6029454059318106533, guid: 2008e7f2ff01fc44aa4679f8b15c2996,
+    type: 3}
