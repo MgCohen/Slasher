@@ -9,7 +9,8 @@ public class DirectionalInput : PlayerInput
     private void Init(Vector3 rawDirection)
     {
         RawDirection = rawDirection;
-        Direction = rawDirection.Unidirectional(m_state.target);
+        Direction = rawDirection.Unidirectional(m_state.transform);
+        Debug.Log(Direction);
     }
 
     public Vector3 Direction

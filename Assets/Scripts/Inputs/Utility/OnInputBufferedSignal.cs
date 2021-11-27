@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnInputSignal
+public class OnInputBufferedSignal
 {
-    public OnInputSignal(PlayerInput input)
+    public OnInputBufferedSignal(PlayerInput input)
     {
         Input = input;
     }

@@ -43,10 +43,8 @@ public abstract class PlayerAction: ScriptableObject
 
     public bool TryStartAction()
     {
-        Debug.Log(1);
         if (m_state.CanPerform(this))
         {
-            Debug.Log(2);
             m_state.Perform(this);
             return true;
         }
@@ -55,7 +53,6 @@ public abstract class PlayerAction: ScriptableObject
 
     public void StartAction()
     {
-        Debug.Log(2);
         m_state.PlayState(m_animation.GetClip());
         OnActionStart();
     }

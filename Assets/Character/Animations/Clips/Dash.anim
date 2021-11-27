@@ -1591,7 +1591,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: FX_TireSmoke
+    path: VFX/FX_TireSmoke
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -1659,7 +1659,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2744709305
+      path: 3345168615
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -6735,7 +6735,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: FX_TireSmoke
+    path: VFX/FX_TireSmoke
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -8114,7 +8114,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 1
   m_Events:
   - time: 0.53333336
-    functionName: CompleteAction
+    functionName: CompleteCurrentAction
     data: 
     objectReferenceParameter: {fileID: 11400000, guid: afe11cdaccbb4b94c953ed1cecaff06f,
       type: 2}

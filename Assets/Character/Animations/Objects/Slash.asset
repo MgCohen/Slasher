@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2dc85e3fda9484d875cce805d27a82, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: ef87a506e93b6944d84b336e9a14ea06, type: 3}
+  m_Name: Slash
   m_EditorClassIdentifier: 
-  m_animation: {fileID: 11400000, guid: 6a1d5384e5cf47248a67975af1993a79, type: 2}
-  m_cd: 0
-  m_priority: 0
-  m_inputString:
-  - {fileID: 11400000, guid: bf44f30cb2ba0e54bacc5afbfbd2814a, type: 2}
+  m_clip: {fileID: 7400000, guid: b438e82a867be984785c48ffe595692e, type: 2}

@@ -22,11 +22,12 @@ public class Character : MonoBehaviour
     {
         m_signalBus.Subscribe<OnSwipeSignal>(OnSwipe);
         m_signalBus.Subscribe<OnTapSignal>(OnTap);
-        Debug.Log(m_state);
+        m_signalBus.Subscribe<OnInputBufferedSignal>(CheckActions);
     }
 
     private void OnSwipe(OnSwipeSignal signal)
     {
+        Debug.Log(signal.Direction);
         m_buffer.AddInput(directionalFactory.Create(signal.Direction));
         CheckActions();
     }
@@ -63,5 +64,4 @@ public class Character : MonoBehaviour
 
         }
     }
-
 }

@@ -11,7 +11,7 @@ public class InputInstaller : ScriptableObjectInstaller<InputInstaller>
         Container.DeclareSignal<OnHoldSignal>().OptionalSubscriber();
         Container.DeclareSignal<OnReleaseSignal>().OptionalSubscriber();
 
-        Container.DeclareSignal<OnInputSignal>().OptionalSubscriber();
+        Container.DeclareSignal<OnInputBufferedSignal>().OptionalSubscriber();
         Container.DeclareSignal<OnInputsFlushedSignal>().OptionalSubscriber();
 
         Container.Bind<Control>().AsSingle().NonLazy();

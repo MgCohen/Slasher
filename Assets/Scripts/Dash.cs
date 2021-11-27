@@ -12,7 +12,6 @@ public class Dash : PlayerAction
     protected override void OnActionStart()
     {
         Vector3 direction = m_values.RawInputDirection;
-        direction = new Vector3(direction.x, 0, direction.y);
         m_state.body.AddForce(direction * m_force);
         m_signalBus.Fire(new OnFocusDirectionSignal(direction));
     }

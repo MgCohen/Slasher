@@ -13,6 +13,7 @@ public class CharacterInstaller : MonoInstaller
         Container.DeclareSignal<OnFocusTargetSignal>().OptionalSubscriber();
         Container.DeclareSignal<OnFocusDirectionSignal>().OptionalSubscriber();
         Container.DeclareSignal<OnReleaseFocusDirectionSignal>().OptionalSubscriber();
+        Container.DeclareSignal<OnChangeStateSignal>().OptionalSubscriber();
 
         Container.Bind<Character>().FromInstance(m_character).AsSingle();
         Container.Bind<CharacterState>().FromInstance(m_state).AsSingle();

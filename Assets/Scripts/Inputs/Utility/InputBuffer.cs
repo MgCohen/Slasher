@@ -11,12 +11,17 @@ public class InputBuffer
 
     private List<PlayerInput> m_inputs = new List<PlayerInput>();
     private int m_maxInputSequence = 5;
-    private float m_comboDelay = 0.3f;
-    private float m_inputBufferingTime = 0.15f;
+    private float m_comboDelay = 0.45f;
+    private float m_inputBufferingTime = 0.2f;
     private float m_lastInput;
 
-
     public PlayerInput LastInput => m_inputs[0];
+
+    [Inject]
+    private void Init()
+    {
+        m_signalBus.Subscribe<OnChangeStateSignal>(CheckBuffer);
+    }
 
     public void AddInput(PlayerInput input)
     {
@@ -35,7 +40,7 @@ public class InputBuffer
             m_inputs.RemoveAt(m_inputs.Count - 1);
         }
 
-        m_signalBus.Fire(new OnInputSignal(input));
+        m_signalBus.Fire(new OnInputBufferedSignal(input));
     }
 
     public bool CheckCombo(List<InputRequirement> combo)
@@ -65,5 +70,13 @@ public class InputBuffer
     private void RefreshInputs()
     {
         m_lastInput = Time.time;
+    }
+
+    private void CheckBuffer()
+    {
+        if(Time.time - m_lastInput <= m_inputBufferingTime)
+        {
+            m_signalBus.Fire(new OnInputBufferedSignal(LastInput));
+        }
     }
 }

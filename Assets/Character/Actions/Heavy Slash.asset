@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe2dc85e3fda9484d875cce805d27a82, type: 3}
-  m_Name: Attack
+  m_Name: Heavy Slash
   m_EditorClassIdentifier: 
-  m_animation: {fileID: 11400000, guid: 6a1d5384e5cf47248a67975af1993a79, type: 2}
+  m_animation: {fileID: 11400000, guid: e6d83a949248e0f41912daaaf3cfaf5f, type: 2}
   m_cd: 0
-  m_priority: 0
+  m_priority: 1
   m_inputString:
   - {fileID: 11400000, guid: bf44f30cb2ba0e54bacc5afbfbd2814a, type: 2}
+  - {fileID: 11400000, guid: bf6b13fd1d0c2ec4eba56ef16cf5c8c4, type: 2}

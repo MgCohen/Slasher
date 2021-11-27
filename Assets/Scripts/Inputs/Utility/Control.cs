@@ -28,8 +28,8 @@ public class Control
     {
         Vector2 swipe = finger.SwipeScreenDelta;
         swipe = swipe.normalized;
-        swipe.Convert();
-        m_signalBus.Fire(new OnSwipeSignal(swipe));
+        Vector3 convertedSwipe = swipe.Convert();
+        m_signalBus.Fire(new OnSwipeSignal(convertedSwipe));
     }
 
     private void OnHold(LeanFinger finger)
